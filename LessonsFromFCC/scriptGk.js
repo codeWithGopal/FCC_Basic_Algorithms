@@ -150,7 +150,23 @@ console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
 // Basic Algorithm Scripting: Boo who
 
 function booWho(bool) {
-    return (bool === true || bool === )
+    return (bool === true || bool === false);
 };
 
 booWho(null);
+
+// Basic Algorithm Scripting: Title Case a Sentence
+
+const titleCase = str => {
+
+    let strArr = str.toLowerCase().split(" ");
+    let finalResult = strArr.map(el => {
+        return el.replace(el.charAt(0), el.charAt(0).toUpperCase());
+    });
+
+    return finalResult.join(' ');
+
+}
+
+console.log(titleCase('sHoRt AnD sToUt'));
+console.log(titleCase('HERE IS MY HANDLE HERE IS MY SPOUT'));
