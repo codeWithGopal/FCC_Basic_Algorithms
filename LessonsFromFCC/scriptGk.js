@@ -170,3 +170,16 @@ const titleCase = str => {
 
 console.log(titleCase('sHoRt AnD sToUt'));
 console.log(titleCase('HERE IS MY HANDLE HERE IS MY SPOUT'));
+
+//  Basic Algorithm Scripting: Slice and Splice
+
+const spliceFunction = (arr1, arr2, num) => {
+    let temp = arr2.slice();
+
+    temp.splice(num, 0, ...arr1);
+    return temp;
+
+
+};
+
+console.log(spliceFunction([1, 2, 3], [4, 5], 1));
