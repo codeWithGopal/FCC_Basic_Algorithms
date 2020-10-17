@@ -180,6 +180,48 @@ const spliceFunction = (arr1, arr2, num) => {
     return temp;
 
 
+
 };
 
 console.log(spliceFunction([1, 2, 3], [4, 5], 1));
+
+// Basic Algorithm Scripting: Falsy Bouncer
+
+const removeFalsyVal = arr => {
+    let result = [];
+
+    arr.forEach(el => {
+        if (el) {
+            result.push(el);
+
+        }
+    });
+    return result;
+}
+
+console.log(removeFalsyVal([7, "ate", "", false, 9]));
+
+console.log(removeFalsyVal([null, NaN, 1, 2, undefined]));
+
+// Basic Algorithm Scripting: Where do I Belong
+
+const arrExample = [5, 8, 1, 9, 10, 6];
+
+const getIndexToIns = (arr, num) => {
+    if (arr.length === 0) return 0;
+    arr.sort((a, b) => a - b);
+    let largeNum = arr.findIndex(el => el >= num);
+
+    if (largeNum === -1) return arr.length;
+    console.log(largeNum);
+    return largeNum;
+
+}
+
+// console.log(getIndexToIns(arrExample, 7));
+console.log(getIndexToIns([10, 20, 30, 40, 50], 35));
+console.log(getIndexToIns([], 1));
+
+
+console.log(arrExample.sort((a, b) => a - b));
+console.log(arrExample);
