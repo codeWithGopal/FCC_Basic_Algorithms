@@ -225,3 +225,39 @@ console.log(getIndexToIns([], 1));
 
 console.log(arrExample.sort((a, b) => a - b));
 console.log(arrExample);
+
+// Basic Algorithm Scripting: Mutations
+
+
+const mutation = arr => {
+    var test = arr[1].toLowerCase();
+    var target = arr[0].toLowerCase();
+    for (var i = 0; i < test.length; i++) {
+        if (target.indexOf(test[i]) < 0) return false;
+    }
+    return true;
+
+}
+
+console.log(mutation(["hello", "Hello"]));
+console.log(mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]));
+console.log(mutation(["Mary", "Army"]));
+console.log(mutation(["ate", "date"]));
+console.log(mutation(["hello", "hey"]));
+
+
+
+// Basic Algorithm Scripting: Chunky Monkey
+
+
+const chunkArrayInGroups = (arr, size) => {
+
+
+    let result = [];
+    for (let i = 0; i < arr.length; i += size) {
+        result.push(arr.slice(i, i + size));
+    }
+    return result;
+}
+
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3));
